@@ -1,0 +1,39 @@
+@import "../../../../modules/shared/styles/mixins.scss";
+.slider-container {
+  border-radius: 10px;
+  a {
+    border-radius: 10px;
+  }
+  img {
+    border-radius: 10px;
+    @include for-desktop-up {
+      max-height: 365px !important;
+    }
+    @include for-phone-only {
+      max-height: 150px !important;
+    }
+    @include for-tablet-portrait-up {
+      max-height: 250px !important;
+    }
+    @include for-big-desktop-up {
+      max-height: 365px !important;
+    }
+    @include for-tablet-landscape-up {
+      max-height: 365px !important;
+    }
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center; // You can change this to bottom, right or left depending
+    // on the position you want.
+  }
+}
+.slider-container item carousel-item active {
+  border-radius: 10px;
+}
+.carousel-control span:before {
+  border-radius: 10px;
+}
+.right carousel-control carousel-control-next {
+  border-radius: 10px;
+}

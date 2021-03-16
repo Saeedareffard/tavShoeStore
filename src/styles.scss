@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../src/assets/fonts/fontawesome-free-5.15.2-web/css/all.css";
+@import "../src/modules/shared/styles/mixins.scss";
+@import "../src/modules/shared/styles/modal.scss";
+@font-face {
+    font-family: "IranSANS";
+    src: url(/src/assets/fonts/FontsFree-Net-ir_sans.ttf);
+  }
+ div{
+     font-family: 'IranSANS';
+ } 
+ nav{
+    font-family: 'IranSANS';
+} 
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,192 @@
+@import "../../../../modules/shared/styles/mixins.scss";
+h3 {
+  @include for-phone-only {
+    // @include font-size(0.2)
+    // @include font-size(0.1);
+    @include font-size(0.7);
+  }
+}
+h4 {
+  @include for-phone-only {
+    // @include font-size(0.2)
+    // @include font-size(0.1);
+    @include font-size(0.62);
+  }
+}
+.sides-padding {
+  flex-grow: 1;
+}
+.main-content {
+  @include for-phone-only {
+    display: flex;
+  flex-direction: column;
+  }
+  @include for-tablet-portrait-up {
+    display: flex;
+    flex-direction: column;
+  }
+  @include for-tablet-landscape-up {
+    display: flex;
+  flex-direction: row-reverse;
+  }
+  flex-grow: 10;
+  display: flex;
+  flex-direction: row-reverse;
+  .card-container {
+    flex-grow: 8;
+    display: flex;
+    flex-direction: row-reverse;
+    // .cart-ttl {
+    // }
+    .main-cart {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      .cart-items {
+        flex-grow: 6;
+        display: flex;
+        flex-direction: row-reverse;
+        .comodity-image-container {
+          img {
+            width: 18vh;
+            @include for-phone-only {
+              width: 15vh;
+            }
+          }
+        }
+        .storage-container {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+        .infos {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .upper-details {
+            margin-top: 20px;
+            h3,
+            h4 {
+              line-height: 0;
+              align-self: center;
+            }
+            .verify-container {
+              img {
+                width: 2vh;
+                @include for-phone-only {
+                  width: 1.3vh;
+                }
+              }
+            }
+          }
+
+          .footer-controls {
+            display: flex;
+            flex-direction: row-reverse;
+            @include for-phone-only {
+              display: flex;
+              flex-direction: column;
+            }
+            .right-elements {
+              @include for-phone-only {
+                display: flex;
+                flex-direction: column;
+              }
+              display: flex;
+              flex-direction: row-reverse;
+            }
+            .left-price {
+              text-align: left;
+              display: flex;
+              flex-direction: row-reverse;
+            }
+          }
+        }
+      }
+    }
+  }
+  .billing-details {
+    max-height: 254px;
+    margin-top: 25px;
+    border-radius: 7px;
+    
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    .total-price-with-discount {
+      border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    }
+    .sum-price {
+      border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    }
+
+    .buy-button {
+      text-align: center;
+      .more-info-buy-button {
+        text-align: end;
+        line-height: 27px;
+        /* width: 69%; */
+        font-size: 6px;
+        overflow-wrap: anywhere;
+        margin-top: 30px;
+      }
+      // border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+    }
+  }
+}
+
+.fg-5 {
+  flex-grow: 5;
+}
+
+.toolbar-controls {
+  @include for-phone-only{
+    margin-right: -120px;
+  }
+  h5 {
+    @include for-phone-only {
+      // @include font-size(0.2)
+      // @include font-size(0.1);
+      @include font-size(0.7);
+    }
+  }
+  display: flex;
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  .quantity {
+    display: flex;
+    max-height: 20px;
+    input {
+      width: 25px;
+      text-align: center;
+    }
+    flex-direction: row-reverse;
+    .plus {
+      border: 1px solid black;
+      border-left: none;
+      border-radius: 0px 6px 6px 0px;
+      text-align: center;
+
+      i {
+        margin-top: 4px;
+      }
+    }
+    .minus {
+      border: 1px solid black;
+      border-right: none;
+      border-radius: 6px 0px 0px 6px;
+      i {
+        margin-top: 4px;
+      }
+    }
+  }
+  .heart {
+    display: flex;
+
+    flex-direction: row-reverse;
+  }
+  .delete {
+    display: flex;
+
+    flex-direction: row-reverse;
+  }
+}

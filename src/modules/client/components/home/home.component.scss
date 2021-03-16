@@ -1,0 +1,155 @@
+@import "../../../../modules/shared/styles/mixins.scss";
+.sides-padding {
+  flex-grow: 1;
+}
+.main-content {
+  flex-grow: 10;
+  .search-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+    @include for-tablet-landscape-up {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .search{
+      flex-grow: 8;
+    }
+    .padding-search{
+      flex-grow: 1;
+    }
+  }
+  .slider-container {
+    flex-grow: 8;
+    display: flex;
+    flex-direction: column;
+  }
+  .ad-container {
+    flex-grow: 5;
+    @include for-phone-only {
+      flex-grow: 5;
+    }
+    .cards {
+      border-radius: 10px;
+      border-color: gray;
+      border: 1px solid;
+      flex-grow: 1;
+      text-align: center;
+      margin-top: 7px;
+      img {
+        @include for-desktop-up {
+          max-height: 168px !important;
+        }
+        @include for-phone-only {
+          max-height: 75px !important;
+        }
+        @include for-tablet-portrait-up {
+          max-height: 111px !important;
+        }
+        @include for-big-desktop-up {
+          max-height: 168px !important;
+        }
+        @include for-tablet-landscape-up {
+          max-height: 168px !important;
+        }
+        // min-width: 100%;
+        // max-width: 100%;
+      }
+    }
+  }
+}
+.just-for-mobile{ 
+  // search box appear above when we have smaller devices
+  @include for-phone-only {
+    
+  }
+  @include for-tablet-portrait-up {
+
+  }
+  @include for-tablet-landscape-up{
+    display: none;
+  }
+  @include for-desktop-up{
+    display: none;
+  }
+  @include for-big-desktop-up{
+    display: none;
+  }
+}
+
+
+.comodity-container{
+  flex-wrap: wrap;
+  .comodities{
+    flex: 0 0 18%;
+    text-align: center;
+    height: 240px;
+    @include for-phone-only{
+      flex: 1 0 27%;
+    height: 240px;
+    }
+   
+    .card-body{
+      overflow: hidden;
+      hr{
+        border-color:#dc3545 !important
+      }
+      .footer-container{
+        align-items: flex-end;
+        i{
+          font-size: larger;
+        }
+        @include for-phone-only{
+          height: 41px;
+        }
+        @include for-tablet-portrait-up{
+          height: 44px;
+        }
+        
+        .buy{
+          flex-grow: 1;
+          cursor: pointer;
+          @include for-phone-only{
+            margin-bottom: 7px;
+          }
+        }
+        .like{
+          flex-grow: 1;
+          cursor: pointer;
+          @include for-phone-only{
+            margin-bottom: 7px;
+          }
+        }
+        .price-container{
+          display: flex;
+          flex-grow: 2; 
+          flex-direction: column;
+          align-items: baseline;
+          @include for-tablet-portrait-up{
+            margin-bottom: -7px;
+          }
+          div{
+            height: 20px;
+          }
+        }
+      }
+      
+    }
+    .card-image{
+      overflow: hidden;
+      img{
+        width: 8vh;
+        object-fit: cover;
+        object-position: center;  
+      }
+      
+    }
+  }
+}

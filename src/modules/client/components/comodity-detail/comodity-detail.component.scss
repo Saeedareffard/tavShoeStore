@@ -1,0 +1,419 @@
+@import "../../../../modules/shared/styles/mixins.scss";
+.sides-padding {
+  flex-grow: 1;
+}
+.main-content {
+  flex-grow: 10;
+  display: flex;
+  flex-direction: row-reverse;
+  .right-detail {
+    flex-grow: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .search-container {
+      flex-grow: 2;
+
+      @include for-phone-only {
+        display: none;
+      }
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+      @include for-tablet-landscape-up {
+        flex-grow: 3;
+        display: flex;
+
+        flex-direction: column;
+      }
+      .search {
+        flex-grow: 1;
+      }
+      .padding-search {
+        flex-grow: 1;
+      }
+    }
+    .images-detail {
+      flex-grow: 5;
+      display: flex;
+      flex-direction: column;
+      align-content: space-around;
+      .special {
+        margin: 4px;
+        flex-grow: 1;
+        align-self: flex-end;
+      }
+      .big-image {
+        // margin: 4px;
+        flex-grow: 3;
+        display: flex;
+        flex-direction: row-reverse;
+        .toolbox-container {
+          flex-grow: 1;
+          margin: 4px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .image-container {
+          flex-grow: 4;
+          margin: 4px;
+          text-align: end;
+          img {
+            width: 20vh;
+          }
+        }
+      }
+      .other-images {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 4px;
+
+        align-self: flex-end;
+        flex-wrap: wrap;
+        .rest-of-images {
+          flex: 0 0 14%;
+          border: 1px gray solid;
+          border-radius: 8px;
+          text-align: center;
+          img {
+            width: 8vh;
+            @include for-phone-only {
+              width: 4vh;
+            }
+          }
+        }
+      }
+    }
+  }
+  .left-detail {
+    flex-grow: 7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include for-phone-only {
+      display: none;
+    }
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+    @include for-tablet-landscape-up {
+      flex-grow: 6;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .title-with-brand {
+      display: flex;
+      flex-grow: 0;
+      flex-direction: row-reverse;
+      .brand {
+        img {
+          width: 4vh;
+        }
+      }
+      .brand-name {
+        height: fit-content;
+        margin-top: 30px;
+      }
+    }
+    .feature {
+      flex-grow: 4;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      small {
+        margin-top: 2px;
+        margin-right: 5px;
+      }
+      .shoe-size-info {
+        flex-grow: 6;
+        display: flex;
+        flex-direction: column;
+      }
+      .feature-items {
+        align-self: flex-end;
+        h2 {
+          text-align: end;
+        }
+        ul {
+          float: right;
+          direction: rtl;
+          li {
+            text-align: initial;
+          }
+        }
+      }
+    }
+    .buy-info {
+      flex-grow: 2;
+      width: 100%;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      .seller-info {
+        display: flex;
+        flex-direction: row-reverse;
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+        .brand {
+          flex-grow: 0.5;
+          text-align: center;
+          img {
+            width: 2vh;
+          }
+        }
+        .rate-and-name {
+          display: flex;
+          flex-grow: 4.5;
+
+          flex-direction: column;
+          .rate {
+            display: flex;
+            flex-direction: row-reverse;
+          }
+          .name {
+            text-align: end;
+            font-size: large;
+          }
+        }
+      }
+      .guarantee {
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+        display: flex;
+        flex-direction: row-reverse;
+        img {
+          width: 2vh;
+          height: 2vh;
+          align-self: center;
+        }
+      }
+      .storage-info {
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+        display: flex;
+        flex-direction: column;
+        .first-element-storage {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+        img {
+          width: 2vh;
+          height: 2vh;
+          align-self: center;
+        }
+        ul {
+          float: right;
+          direction: rtl;
+          margin-top: -19px;
+          li {
+            text-align: initial;
+          }
+        }
+      }
+      .price-info {
+        display: flex;
+        flex-direction: column;
+        .price-detail{
+          display: flex;
+          flex-direction: row-reverse;
+          .right-element{
+            align-self: flex-end;
+            h4{
+              color: gray;
+
+            }
+            i{
+              transform: scaleX(-1);
+            }
+          } 
+          .left-element{
+            align-self: flex-start;
+          }
+        }
+        .buy-button{
+          text-align: center;
+        }
+      }
+    }
+  }
+  .down-detail {
+    flex-grow: 7;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include for-phone-only {
+      border-top: 1px rgba(0, 0, 0, 0.1) solid;
+      flex-grow: 6;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    @include for-tablet-portrait-up {
+      border-top: 1px rgba(0, 0, 0, 0.1) solid;
+      flex-grow: 6;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+    @include for-desktop-up{
+      display: none;
+    }
+
+    .title-with-brand {
+      display: flex;
+      flex-grow: 0;
+      flex-direction: row-reverse;
+      .brand {
+        img {
+          width: 4vh;
+        }
+      }
+      .brand-name {
+        height: fit-content;
+        margin-top: 30px;
+      }
+    }
+    .feature {
+      flex-grow: 4;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      small {
+        margin-top: 2px;
+        margin-right: 5px;
+      }
+      .shoe-size-info {
+        flex-grow: 6;
+        display: flex;
+        flex-direction: column;
+      }
+      .feature-items {
+        align-self: flex-end;
+        h2 {
+          text-align: end;
+        }
+        ul {
+          float: right;
+          direction: rtl;
+          li {
+            text-align: initial;
+          }
+        }
+      }
+    }
+    .buy-info {
+      flex-grow: 2;
+      width: 100%;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      .seller-info {
+        display: flex;
+        flex-direction: row-reverse;
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+        .brand {
+          flex-grow: 0.5;
+          text-align: center;
+          img {
+            width: 2vh;
+          }
+        }
+        .rate-and-name {
+          display: flex;
+          flex-grow: 4.5;
+
+          flex-direction: column;
+          .rate {
+            display: flex;
+            flex-direction: row-reverse;
+          }
+          .name {
+            text-align: end;
+            font-size: large;
+          }
+        }
+      }
+      .guarantee {
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+        display: flex;
+        flex-direction: row-reverse;
+        img {
+          width: 2vh;
+          height: 2vh;
+          align-self: center;
+        }
+      }
+      .storage-info {
+        border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+        display: flex;
+        flex-direction: column;
+        .first-element-storage {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+        img {
+          width: 2vh;
+          height: 2vh;
+          align-self: center;
+        }
+        ul {
+          float: right;
+          direction: rtl;
+          margin-top: -19px;
+          li {
+            text-align: initial;
+          }
+        }
+      }
+      .price-info {
+        display: flex;
+        flex-direction: column;
+        .price-detail{
+          display: flex;
+          flex-direction: row-reverse;
+          .right-element{
+            align-self: flex-end;
+            h4{
+              color: gray;
+
+            }
+            i{
+              transform: scaleX(-1);
+            }
+          } 
+          .left-element{
+            align-self: flex-start;
+          }
+        }
+        .buy-button{
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.just-for-mobile {
+  // search box appear above when we have smaller devices
+  @include for-phone-only {
+    display: flex;
+  }
+  @include for-tablet-portrait-up {
+    display: flex;
+  }
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+  @include for-desktop-up {
+    display: none;
+  }
+  @include for-big-desktop-up {
+    display: none;
+  }
+}
+
+
+
+h4{text-align: end;}

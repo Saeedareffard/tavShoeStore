@@ -1,0 +1,105 @@
+<div class="d-flex flex-row-reverse">
+  <div class="sides-padding"></div>
+  <div id="main-content" class="main-content">
+    <div class="d-flex flex-row-reverse">
+      <div class="input-group just-for-mobile">
+        <div class="input-group-prepend">
+          <button class="btn" type="button">
+            <i class="fa fa-filter"></i>
+          </button>
+        </div>
+        <input type="text" class="form-control" placeholder="جست و جو" />
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+   
+    <br />
+    <div class="d-flex flex-row-reverse">
+      <div class="search-container">
+        <div class="container">
+          <div class="d-flex flex-row-reverse">
+            <div class="search">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button class="btn" type="button">
+                    <i class="fa fa-filter"></i>
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="جست و جو"
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="padding-search"></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-container px-4 ml-3 shadow">
+        <app-slider> </app-slider>
+      </div>
+      <div class="ad-container px-2">
+        <div class="cards py-1">
+          <img
+            src="../../../../assets/slider-images/shoeForSlider4.jpeg"
+            alt=""
+          />
+        </div>
+        <div class="cards py-1">
+          <img
+            src="../../../../assets/slider-images/shoeForSlider4.jpeg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="d-flex comodity-container">
+      <div class="comodities mx-4 my-2 card shadow" *ngFor="let item of KalaList">
+        <div class="card-body">
+          <h4 class="card-title text-danger" *ngIf="item.isSpecial">فروش ویژه</h4>
+          <hr />
+          <div class="card-image">
+            <img
+              [src]="item.kalaImageUrl"
+              alt=""
+            />
+          </div>
+          <div class="card-text">{{item.title}}</div>
+          <div class="d-flex flex-row-reverse footer-container">
+            <div class="buy" (click)="addToCart(item)">
+              <i class="fa fa-cart-plus"></i>
+            </div>
+            <div class="like">
+              <i class="far fa-heart"></i>
+            </div>
+            <div class="price-container">
+              <div class="flex-grow-1 flex-row-reverse">
+                <i class="fas fa-star text-warning"></i>
+               {{item.rate}}
+                <small>({{item.rateCount}})</small>
+              </div>
+              <div class="flex-grow-1">
+                <strong dir="rtl">{{item.price}} تومان</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="sides-padding"></div>
+</div>
+
+
